@@ -6,11 +6,6 @@ export const CartContainer = styled.div`
 
   width: 95vw;
 
-  @media (min-width: 1024px) {
-    position: fixed;
-    left: 70%;
-  }
-
   @media (min-width: 407px) {
     max-width: 382px;
     margin-top: 2rem;
