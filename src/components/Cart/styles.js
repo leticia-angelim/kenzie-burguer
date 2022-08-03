@@ -3,12 +3,17 @@ import styled from "styled-components";
 export const CartContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-self: center;
 
   width: 95vw;
 
   @media (min-width: 407px) {
     max-width: 382px;
     margin-top: 2rem;
+  }
+
+  @media (min-width: 1025px) {
+    align-self: flex-start;
   }
 `;
 

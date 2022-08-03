@@ -6,7 +6,7 @@ export const CardList = styled.div`
 
   overflow-x: scroll;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     flex-wrap: wrap;
 
     width: 73%;
