@@ -36,6 +36,8 @@ export const Card = styled.div`
   }
 
   @media (min-width: 769px) {
+    transition: 0.3s ease-out;
+
     &:hover {
       transform: scale(1.1);
     }
@@ -76,6 +78,8 @@ export const Button = styled.button`
   border-radius: 8px;
   background: var(--color-primary);
   border: 2px solid var(--color-primary);
+
+  transition: 0.3s ease-out;
 
   &:hover {
     background: var(--color-primary-50);

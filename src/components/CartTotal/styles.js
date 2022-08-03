@@ -44,6 +44,8 @@ export const Button = styled.button`
   border-radius: 8px;
   border: 2px solid var(--gray-20);
 
+  transition: 0.4s ease-out;
+
   &:hover {
     color: var(--gray-20);
     background: var(--gray-50);
