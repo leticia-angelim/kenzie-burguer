@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import api from "./services/api";
 
+import Cart from "./components/Cart";
 import Header from "./components/Header";
 import ProductList from "./components/ProductList";
-import Cart from "./components/Cart";
 
 import GlobalStyle from "./styles/global";
 import { Main } from "./styles/styles";
@@ -24,17 +24,17 @@ function App() {
   const showProducts = (inputValue) => {
     const result = products.filter(
       (product) =>
-        product.name.toLowerCase().includes(inputValue) ||
-        product.category.toLowerCase().includes(inputValue)
+        product.name.toLowerCase().includes(inputValue.toLowerCase()) ||
+        product.category.toLowerCase().includes(inputValue.toLowerCase())
     );
 
     setFilteredProducts(result);
   };
 
   const handleClick = (productId) => {
-    const different = currentSale.filter((product) => product.id === productId);
+    const equals = currentSale.some((product) => product.id === productId);
 
-    if (different.length === 0) {
+    if (!equals) {
       const result = products.find((product) => product.id === productId);
       setCurrentSale([...currentSale, result]);
     }
